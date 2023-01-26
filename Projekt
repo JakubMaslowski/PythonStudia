@@ -1,0 +1,248 @@
+import math
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        print("Cannot divide by zero.")
+        return
+    return a / b
+
+def power(a, b):
+    return a ** b
+
+def square_root(a):
+    return a ** 0.5
+
+def logarithm(a):
+    return log10(a)
+
+def sine(a):
+    return sin(a)
+
+def cosine(a):
+    return cos(a)
+
+def tangent(a):
+    return tan(a)
+
+def absolute_value(a):
+    return abs(a)
+
+def round_number(a):
+    return round(a)
+
+def floor_value(a):
+    return math.floor(a)
+
+def ceil_value(a):
+    return math.ceil(a)
+
+def factorial(a):
+    if a == 0:
+        return 1
+    return a * factorial(a-1)
+
+def is_even(a):
+    return a % 2 == 0
+
+def is_odd(a):
+    return a % 2 != 0
+
+def maximum(a, b):
+    return max(a, b)
+
+def minimum(a, b):
+    return min(a, b)
+
+def add_three_numbers(a, b, c):
+    return a + b + c
+
+def multiply_three_numbers(a, b, c):
+    return a * b * c
+
+def mean_of_three_numbers(a, b, c):
+    return (a + b + c) / 3
+
+def median_of_three_numbers(a, b, c):
+    numbers = [a, b, c]
+    numbers.sort()
+    return numbers[1]
+
+def geometric_mean_of_three_numbers(a, b, c):
+    return (a * b * c) ** (1/3)
+
+def harmonic_mean_of_three_numbers(a, b, c):
+    return 3 / (1/a + 1/b + 1/c)
+
+def variance_of_three_numbers(a, b, c):
+    mean = mean_of_three_numbers(a, b, c)
+    return ( (a - mean)**2 + (b - mean)**2 + (c - mean)**2 ) / 3
+
+def standard_deviation_of_three_numbers(a, b, c):
+    return variance_of_three_numbers(a, b, c) ** 0.5
+
+def range_of_three_numbers(a, b, c):
+    numbers = [a, b, c]
+    numbers.sort()
+    return numbers[2] - numbers[0]
+
+def mode_of_three_numbers(a, b, c):
+    numbers = [a, b, c]
+    return max(set(numbers), key = numbers.count)
+
+def sum_of_squares_of_three_numbers(a, b, c):
+    return a**2 + b**2 + c**2
+
+def main():
+    while True:
+        print("Menu:")
+        print("1: Add")
+        print("2: Subtract")
+        print("3: Multiply")
+        print("4: Divide")
+        print("5: Power")
+        print("6: Square Root")
+        print("7: Logarithm")
+        print("8: Sine")
+        print("9: Cosine")
+        print("10: Tangent")
+        print("11: Absolute Value")
+        print("12: Round Number")
+        print("13: Floor Value")
+        print("14: Ceil Value")
+        print("15: Factorial")
+        print("16: Is Even")
+        print("17: Is Odd")
+        print("18: Maximum")
+        print("19: Minimum")
+        print("20. Add three numbers")
+        print("21. Multiply three numbers")
+        print("22. Mean of three numbers")
+        print("23. Median of three numbers")
+        print("24. Geometric mean of three numbers")
+        print("25. Harmonic mean of three numbers")
+        print("26. Variance of three numbers")
+        print("27. Standard deviation of three numbers")
+        print("28. Range of three numbers")
+        print("29. Mode of three numbers")
+        print("30. Sum of squares of three numbers")
+        
+        
+        user_input = int(input("Select a function (1-30): "))
+        if user_input == 1:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", add(a, b))
+        elif user_input == 2:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", subtract(a, b))
+        elif user_input == 3:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", multiply(a, b))
+        elif user_input == 4:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", divide(a, b))
+        elif user_input == 5:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", power(a, b))
+        elif user_input == 6:
+            a = int(input("Enter a: "))
+            print("Result:", square_root(a))
+        elif user_input == 7:
+            a = int(input("Enter a: "))
+            print("Result:", logarithm(a))
+        elif user_input == 8:
+            a = int(input("Enter a: "))
+            print("Result:", sine(a))
+        elif user_input == 9:
+            a = int(input("Enter a: "))
+            print("Result:", cosine(a))
+        elif user_input == 10:
+            a = int(input("Enter a: "))
+            print("Result:", tangent(a))
+        elif user_input == 11:
+            a = int(input("Enter a: "))
+            print("Result:", absolute_value(a))
+        elif user_input == 12:
+            a = float(input("Enter a: "))
+            print("Result:", round_number(a))
+        elif user_input == 13:
+            a = int(input("Enter a: "))
+            print("Result:", floor_value(a))
+        elif user_input == 14:
+            a = int(input("Enter a: "))
+            print("Result:", ceil_value(a))
+        elif user_input == 15:
+            a = int(input("Enter a: "))
+            print("Result:", factorial(a))
+        elif user_input == 16:
+            a = int(input("Enter a: "))
+            print("Result:", is_even(a))
+        elif user_input == 17:
+            a = int(input("Enter a: "))
+            print("Result:", is_odd(a))
+        elif user_input == 18:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", maximum(a, b))
+        elif user_input == 19:
+            a = int(input("Enter a: "))
+            b = int(input("Enter b: "))
+            print("Result:", minimum(a, b))
+        elif user_input == 20:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", add_three_numbers(a, b, c))
+        elif user_input == 22:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", multiply_three_numbers(a, b, c))
+        elif user_input == 23:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", mean_of_three_numbers(a, b, c))
+        elif user_input == 24:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", median_of_three_numbers(a, b, c))
+        elif user_input == 25:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", geometric_mean_of_three_numbers(a, b, c))
+        elif user_input == 26:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", harmonic_mean_of_three_numbers(a, b, c))
+        elif user_input == 27:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", variance_of_three_numbers(a, b, c))
+        elif user_input == 28:
+            a = int(input("Enter first number: "))
+            b = int(input("Enter second number: "))
+            c = int(input("Enter third number: "))
+            print("Result: ", standard_deviation_of_three_numbers(a, b, c))
+        else:
+            print("Invalid input. Please enter a number between 1 and 30.")
+
+if __name__ == "__main__":
+    main()
